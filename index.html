@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PEACE//OPS | Ground station</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview" aria-label="Peace Ops home"><span class="brand-mark">+</span><span>PEACE<span>//</span>OPS</span></a>
+        <div class="side-label">Mission control</div>
+        <nav class="nav" aria-label="Main navigation">
+          <a class="nav-item active" href="#overview" data-view="overview"><span>◈</span>Overview <b>01</b></a>
+          <a class="nav-item" href="#sensor" data-view="sensor"><span>◎</span>Live sensor <b>02</b></a>
+          <a class="nav-item" href="#routes" data-view="routes"><span>⌁</span>Safe routing <b>03</b></a>
+          <a class="nav-item" href="#alerts" data-view="alerts"><span>△</span>Interdiction <b>04</b></a>
+        </nav>
+        <div class="side-label">System</div>
+        <nav class="nav">
+          <a class="nav-item" href="#system" data-view="system"><span>⊙</span>Telemetry <b>05</b></a>
+        </nav>
+        <div class="sidebar-foot"><span class="status-dot"></span><span>UNIT 01 / ONLINE</span><small>Peace operations research</small></div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar"><div class="crumb">FIELD CONSOLE <span>/</span> SECTOR 07</div><div class="top-actions"><span class="live-pill"><i></i> SYSTEM LIVE</span><button class="icon-button" id="gpsButton" title="Request current GPS location">⌖</button><span class="clock" id="clock">--:--:-- UTC</span></div></header>
+        <div id="app" class="content"></div>
+      </main>
+    </div>
+    <input id="videoInput" type="file" accept="video/*" hidden />
+    <script src="app.js"></script>
+  </body>
+</html>
